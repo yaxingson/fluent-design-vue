@@ -1,0 +1,14 @@
+{
+  "compilerOptions":{
+    "moduleResolution":"node",
+    "jsx":"preserve",
+    "paths":{
+
+    },
+
+    "outDir":"dist",
+    "declarationMap":false
+  },
+  "include":["./lib", "./types/*.d.ts"],
+  "exclude":["./lib/**/*.spec.ts", "./lib/**/*.stories.ts"]
+}

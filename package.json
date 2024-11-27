@@ -1,0 +1,95 @@
+{
+  "name": "fluent-design-vue",
+  "author": "yaxingson <3228891558@qq.com>",
+  "version": "0.0.4",
+  "description": "vue component library based on fluent2 design system",
+  "keywords": [
+    "vue",
+    "fluent",
+    "design",
+    "component library",
+    "ui"
+  ],
+  "homepage": "https://github.com/yaxingson/fluent-design-vue",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yaxingson/fluent-design-vue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yaxingson/fluent-design-vue/issues"
+  },
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./auto-import-resolver":{
+      "types":"",
+      "import":"./dist/auto-import-resolver.js",
+      "require":"./dist/auto-import-resolver.cjs"
+    },
+    "./*": "./*"
+  },
+  "style": "dist/style/index.css",
+  "unpkg": "dist/index.full.js",
+  "jsdelivr": "dist/index.full.js",
+  "sideEffects": [],
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "prepare": "husky",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "vitest --run --dir lib/components --environment=jsdom",
+    "build": "rimraf dist && node scripts/build.js && tsc --declaration --emitDeclarationOnly"
+  },
+  "pnpm": {
+    "overrides": {}
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "3.2.2",
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@storybook/addon-essentials": "8.4.3",
+    "@storybook/addon-interactions": "8.4.3",
+    "@storybook/addon-onboarding": "8.4.3",
+    "@storybook/blocks": "8.4.3",
+    "@storybook/test": "8.4.3",
+    "@storybook/vue3": "8.4.3",
+    "@storybook/vue3-vite": "8.4.3",
+    "@vitejs/plugin-vue": "^5.2.0",
+    "@vue/compiler-sfc": "^3.5.13",
+    "commitlint": "^19.3.0",
+    "eslint": "^9.2.0",
+    "eslint-plugin-storybook": "^0.11.0",
+    "husky": "^9.0.11",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.2.5",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.17.2",
+    "rollup-plugin-license": "^3.5.3",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.76.0",
+    "storybook": "8.4.3",
+    "stylelint": "^16.10.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0",
+    "vue": "^3.4.26",
+    "vue-tsc": "^2.0.16"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.26"
+  },
+  "license": "MIT"
+}
